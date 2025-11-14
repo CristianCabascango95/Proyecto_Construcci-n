@@ -113,16 +113,12 @@ const DashboardPage = () => {
 
   return (
     <div className="dashboard-container">
-      <h2 className="dashboard-title">🚀 Dashboard</h2>
+      <h2 className="dashboard-title"> Dashboard</h2>
 
-      {error && (
-        <div className="error-message">
-          <p><strong>Error:</strong> {error}</p>
-        </div>
-      )}
+     
 
       <p className="dashboard-welcome">
-        Bienvenido, <span className="email-text">{userEmail || 'No identificado'}</span> <br />
+        Bienvenido <br></br>{/* --- <span className="email-text">{userEmail || 'No identificado'}</span> <br />--- */}
         Estado:{" "}
         <span className={`status-badge ${isConnected ? 'connected' : 'disconnected'}`}>
           {isConnected ? '✅ Conectado' : '❌ Desconectado'}
