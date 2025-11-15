@@ -1,5 +1,5 @@
 // URL base de tu servidor backend.
-const API_BASE_URL = 'http://localhost:5000/api'; 
+const API_BASE_URL = 'https://backend-google-auth-h2us.onrender.com/api'; 
 
 /**
  * Función para hacer fetch y manejar la respuesta JSON.
@@ -76,3 +76,4 @@ export const fetchCalendarEvents = async (accessToken) => {
     // Si el backend refrescó el token, vendrá en la respuesta
     return { events: data.events, newAccessToken: data.newAccessToken };
 };
+

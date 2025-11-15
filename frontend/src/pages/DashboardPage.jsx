@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const API_BASE_URL = 'http://localhost:5000/api';
-
+//const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'https://backend-google-auth-h2us.onrender.com/api';
 // ---------- Funciones API ----------
 const postApi = async (endpoint, data) => {
   const response = await fetch(`${API_BASE_URL}${endpoint}`, {
@@ -80,6 +80,8 @@ const DashboardPage = () => {
   const handleConnectGoogle = () => {
     const client_id = '1057271165611-jh8tt14a56v5818kutabgova9jrlmkc7.apps.googleusercontent.com';
     const redirect_uri = 'http://localhost:5173/google-callback';
+    //const redirect_uri = 'https://backend-google-auth-h2us.onrender.com';
+
     const scope =
       'https://www.googleapis.com/auth/drive.readonly https://www.googleapis.com/auth/calendar.readonly';
 
