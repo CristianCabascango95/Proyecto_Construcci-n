@@ -13,7 +13,11 @@ let savedRefreshToken = null;
 
 // Configuración de Middlewares
 app.use(cors({ 
-    origin: 'http://localhost:5173' // Permite el acceso solo a tu frontend de React
+    //origin: 'http://localhost:5173' // Permite el acceso solo a tu frontend de React
+    origin: process.env.FRONTEND_URL || "http://localhost:5173",
+    credentials: true
+
+
 }));
 app.use(bodyParser.json());
 
