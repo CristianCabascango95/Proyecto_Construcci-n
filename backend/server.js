@@ -23,7 +23,7 @@ app.use(cors({
     optionsSuccessStatus: 200
 
 }));
-app.options("*", cors());
+
 
 app.use(bodyParser.json());
 
@@ -214,9 +214,7 @@ app.post('/api/calendar/events', async (req, res) => {
     }
 });
 
-app.get("/", (req, res) => {
-  res.send("Backend funcionando correctamente 🚀");
-});
+
 // Iniciar el servidor
 app.listen(PORT, () => {
     console.log(`🚀 Backend corriendo en http://localhost:${PORT}`);
