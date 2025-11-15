@@ -12,12 +12,12 @@ const PORT = process.env.PORT || 5000;
 let savedRefreshToken = null; 
 
 // Configuración de Middlewares
-app.use(cors({ 
-    //origin: 'http://localhost:5173' // Permite el acceso solo a tu frontend de React
-    origin: process.env.FRONTEND_URL || "http://localhost:5173",
+app.use(cors({
+    origin: [
+        "http://localhost:5173", 
+        "https://frontend-google-auth.onrender.com"
+    ],
     credentials: true
-
-
 }));
 app.use(bodyParser.json());
 
