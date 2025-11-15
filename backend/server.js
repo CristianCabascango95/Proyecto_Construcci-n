@@ -17,6 +17,8 @@ app.use(cors({
         "http://localhost:5173", 
         "https://frontend-google-auth.onrender.com"
     ],
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
     credentials: true
 }));
 app.use(bodyParser.json());
